@@ -1,7 +1,7 @@
 #
 # Author:: Seth Chisamore (<schisamo@opscode.com>)
 # Author:: Matt Ray (<matt@opscode.com>)
-# Copyright:: Copyright (c) 2011-2012 Opscode, Inc.
+# Copyright:: Copyright (c) 2011-2013 Opscode, Inc.
 # License:: Apache License, Version 2.0
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -70,9 +70,7 @@ class Chef
             msg_pair("Instance Name", server.name)
             msg_pair("Flavor", server.flavor['id'])
             msg_pair("Image", server.image['id'])
-            # msg_pair("Availability Zone", server.availability_zone)
-            # msg_pair("Security Groups", server.groups.join(", "))
-            # msg_pair("SSH Key", server.key_name)
+            msg_pair("Availability Zone", server.availability_zone)
             msg_pair("Public IP Address", server.public_ip_address['addr']) if server.public_ip_address
             msg_pair("Private IP Address", server.private_ip_address['addr']) if server.private_ip_address
 
